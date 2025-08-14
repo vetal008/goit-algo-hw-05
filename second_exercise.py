@@ -4,7 +4,7 @@ import re
 
 
 def generator_numbers(text: str):
-    pattern = r'(\d+\.\d{2})'
+    pattern = r' \d+(?:\.\d+)? '
     for elem in re.findall(pattern, text):
         yield Decimal(elem)
 
